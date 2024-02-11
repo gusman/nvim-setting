@@ -14,11 +14,12 @@ vim.o.softtabstop = 4
 vim.o.expandtab = false
 	
 -- Python specific editing
--- vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
---  pattern = "*.py",
---  callback = function()
---    vim.bo.expandtab = true
---	print("Entering python File")
---  end
---})
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+	pattern = "*.py",
+	callback = function()
+	vim.bo.expandtab = true
+end
+})
+
+
 
