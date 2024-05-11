@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 	end,
 })
 
+-- To move somewhere
 -- Nvim tree configs
 require("nvim-tree").setup {
 	renderer = {
@@ -62,7 +63,18 @@ require("nvim-tree").setup {
 	},
 }
 
--- Nvim commnet configs
-require("Comment").setup()
+-- To move somewhere
+-- Comment mapping configs
+require('Comment').setup({
+	ignore = '^$',
+	toggler = {
+		line = '<leader>cc',
+		block = '<leader>bc',
+	},
+	opleader = {
+		line = '<C-_>',
+		block = '<C-\\>',
+	},
+})
 
 
