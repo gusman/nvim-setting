@@ -3,6 +3,9 @@ require("plugins")
 require("keymaps")
 require("lsp")
 
+-- colorscheme
+vim.opt.termguicolors = true
+vim.cmd.colorscheme('monokai_pro')
 
 -- Below part is required for vim-tree
 --
