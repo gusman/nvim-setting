@@ -55,3 +55,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 	end
 })
+
+-- Auto format buffer with LSP
+vim.api.nvim_create_augroup('AutoFormatting', {})
+vim.api.nvim_create_autocmd('BufWritePre', {
+	pattern = '*.go',
+	group = 'AutoFormatting',
+	callback = function()
+		vim.lsp.buf.format({ async = true })
+	end,
+})
+
