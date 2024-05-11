@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
 
 	-- color scheme
 	use 'tanvirtin/monokai.nvim'
+	use 'ellisonleao/gruvbox.nvim'
 
 	-- commenter
 	use 'numToStr/Comment.nvim'
