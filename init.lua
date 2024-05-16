@@ -68,8 +68,8 @@ require("nvim-tree").setup {
 require('Comment').setup({
 	ignore = '^$',
 	toggler = {
-		line = '<leader>cc',
-		block = '<leader>bc',
+		line = '<C-_>',
+		block = '<C-\\>',
 	},
 	opleader = {
 		line = '<C-_>',
