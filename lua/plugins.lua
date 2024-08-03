@@ -32,6 +32,12 @@ return require('packer').startup(function(use)
 	-- ripgrep is required by telescope for live-grep function
 	use 'BurntSushi/ripgrep'
 
+	-- treesitter
+	use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
 end)
 
 
