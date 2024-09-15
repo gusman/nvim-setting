@@ -14,8 +14,15 @@ return require('packer').startup(function(use)
 	use 'neovim/nvim-lspconfig'
 
 	-- color scheme
-	use 'tanvirtin/monokai.nvim'
+	use {
+	  "loctvl842/monokai-pro.nvim",
+	  config = function()
+		require("monokai-pro").setup()
+	  end
+	}
 	use 'ellisonleao/gruvbox.nvim'
+	use { "catppuccin/nvim", as = "catppuccin"  }
+	use 'rebelot/kanagawa.nvim'
 
 	-- commenter
 	use 'numToStr/Comment.nvim'
