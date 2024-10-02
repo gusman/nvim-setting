@@ -7,6 +7,9 @@ require("lsp")
 -- Color 
 vim.opt.termguicolors = true
 
+-- No wrap by default
+vim.opt.wrap = false
+
 -- Below part is required for vim-tree
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
