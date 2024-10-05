@@ -7,6 +7,7 @@ lspconfig.gopls.setup({
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 	root_dir = util.root_pattern( "go.work", "go.mod", ".git" ),
+	single_file_support = false,
 	settings = {
 		gopls = {
 			analyses = {
@@ -16,23 +17,24 @@ lspconfig.gopls.setup({
 			gofumpt = true,
 		},
 	},
-	single_file_support = true,
 })
 
--- Disable for moment pyright or python setup
--- lspconfig.pyright.setup({
--- 	cmd = { "pyright-langserver", "--stdio" },
--- 	filetypes = { "python" },
--- 	root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
--- 	python = {
--- 		analysis = {
--- 			autoSearchPaths = true,
--- 			diagnosticMode = "openFilesOnly",
--- 			useLibraryCodeForTypes = true
--- 		}
--- 	},
--- 	single_file_support = true,
--- })
+require'lspconfig'.pylsp.setup{
+	cmd = { "pylsp" },
+	filetypes = { "python" },
+	root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
+	single_file_support = false,
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = {'W391'},
+					maxLineLength = 88
+				}
+			}
+		}
+	}
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	desc = 'LSP actions',
