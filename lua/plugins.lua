@@ -1,50 +1,34 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
-
+return {
 	-- file explorer
-	use 'nvim-tree/nvim-tree.lua'
+	"nvim-tree/nvim-tree.lua",
 
 	-- lsp-config
-	use 'neovim/nvim-lspconfig'
+	"neovim/nvim-lspconfig",
 
 	-- color scheme
-	use {
-	  "loctvl842/monokai-pro.nvim",
-	  config = function()
-		require("monokai-pro").setup()
-	  end
-	}
-	use 'ellisonleao/gruvbox.nvim'
-	use { "catppuccin/nvim", as = "catppuccin"  }
-	use 'rebelot/kanagawa.nvim'
+	{ "loctvl842/monokai-pro.nvim", lazy=false, },
+	"ellisonleao/gruvbox.nvim",
+	{ "catppuccin/nvim", name = "catppuccin"  },
+	"rebelot/kanagawa.nvim",
 
 	-- commenter
-	use 'numToStr/Comment.nvim'
+	"numToStr/Comment.nvim",
 
 	-- telesecope
-	use { 
+	{ 
 		'nvim-telescope/telescope.nvim', 
 		tag = '0.1.6',
 		requires = { { 'nvim-lua/plenary.nvim' } }
-	}
+	},
 
 	-- ripgrep
 	-- ripgrep requires ripgres application is installed in OS level
 	-- ripgrep is required by telescope for live-grep function
-	use 'BurntSushi/ripgrep'
+	"BurntSushi/ripgrep",
 
 	-- treesitter
-	use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
 
-end)
+}
 
 

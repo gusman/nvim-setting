@@ -1,5 +1,5 @@
-require("settings")
-require("plugins")
+require("config.lazy")
+require("lazy").setup("plugins")
 require("keymaps")
 require("theme")
 require("lsp")
