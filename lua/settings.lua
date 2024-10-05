@@ -6,6 +6,11 @@ vim.opt.backspace = "indent,eol,start"
 vim.o.hlsearch = true
 -- vim.o.cursorline = true
 
+-- Color 
+vim.opt.termguicolors = true
+
+-- No wrap by default
+vim.opt.wrap = false
 
 -- Global or common editor
 vim.o.ts = 4

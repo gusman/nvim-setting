@@ -1,14 +1,9 @@
 require("config.lazy")
 require("lazy").setup("plugins")
+require("settings")
 require("keymaps")
 require("theme")
 require("lsp")
-
--- Color 
-vim.opt.termguicolors = true
-
--- No wrap by default
-vim.opt.wrap = false
 
 -- Below part is required for vim-tree
 -- disable netrw at the very start of your init.lua
