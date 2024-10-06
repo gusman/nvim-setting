@@ -4,7 +4,7 @@ vim.o.ruler = true
 vim.o.ignorecase = true
 vim.opt.backspace = "indent,eol,start"
 vim.o.hlsearch = true
--- vim.o.cursorline = true
+vim.o.cursorline = true
 
 -- Color 
 vim.opt.termguicolors = true

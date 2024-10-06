@@ -1,9 +1,9 @@
 require("config.lazy")
 require("lazy").setup("plugins")
 require("settings")
-require("keymaps")
 require("theme")
 require("lsp")
+require("keymaps")
 
 -- Below part is required for vim-tree
 -- disable netrw at the very start of your init.lua
@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 -- Auto format buffer with LSP
 vim.api.nvim_create_augroup('AutoFormatting', {})
 vim.api.nvim_create_autocmd('BufWritePre', {
-	pattern = '*.go',
+	pattern = { '*.go', '*.py' } ,
 	group = 'AutoFormatting',
 	callback = function()
 		vim.lsp.buf.format({ async = true })
@@ -117,3 +117,4 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+

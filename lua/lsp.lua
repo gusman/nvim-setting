@@ -30,7 +30,8 @@ require'lspconfig'.pylsp.setup{
 				pycodestyle = {
 					ignore = {'W391'},
 					maxLineLength = 88
-				}
+				},
+				black = {enabled = true},
 			}
 		}
 	}
@@ -80,16 +81,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		-- Selects a code action available at the current cursor position
 		bufmap('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 	end
-})
-
--- Auto format buffer with LSP
-vim.api.nvim_create_augroup('AutoFormatting', {})
-vim.api.nvim_create_autocmd('BufWritePre', {
-	pattern = '*.go',
-	group = 'AutoFormatting',
-	callback = function()
-		vim.lsp.buf.format({ async = true })
-	end,
 })
 
 -- Autoimport for go
