@@ -21,6 +21,12 @@ return {
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	},
 
+	-- telescope fzf
+	{ 
+		'nvim-telescope/telescope-fzf-native.nvim', 
+		build = 'make',
+	},
+
 	-- ripgrep
 	-- ripgrep requires ripgres application is installed in OS level
 	-- ripgrep is required by telescope for live-grep function
