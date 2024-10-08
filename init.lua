@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 -- Auto format buffer with LSP
 vim.api.nvim_create_augroup('AutoFormatting', {})
 vim.api.nvim_create_autocmd('BufWritePre', {
-	pattern = { '*.go', '*.py' } ,
+	pattern = { '*.go' } ,
 	group = 'AutoFormatting',
 	callback = function()
 		vim.lsp.buf.format({ async = true })
