@@ -33,7 +33,10 @@ return {
 	"BurntSushi/ripgrep",
 
 	-- treesitter
-	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
+	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+
+	-- git
+	"lewis6991/gitsigns.nvim"
 
 }
 
