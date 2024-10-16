@@ -1,6 +1,9 @@
 return {
 	-- file explorer
-	"nvim-tree/nvim-tree.lua",
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	},
 
 	-- lsp-config
 	"neovim/nvim-lspconfig",
@@ -36,7 +39,13 @@ return {
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
 	-- git
-	"lewis6991/gitsigns.nvim"
+	"lewis6991/gitsigns.nvim",
+
+	-- lualine
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' }
+	}
 
 }
 
