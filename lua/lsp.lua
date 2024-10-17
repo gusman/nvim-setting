@@ -1,9 +1,3 @@
--- Mason
-require("mason").setup()
-require("mason-lspconfig").setup {
-	ensure_installed = { "lua_ls", "pylsp", },
-}
-
 -- Requirements
 local lspconfig = require('lspconfig')
 local util = lspconfig.util

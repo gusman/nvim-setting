@@ -5,13 +5,6 @@ return {
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
 
-	-- mason to handle lsp server installation
-	{
-		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
-		"neovim/nvim-lspconfig",
-	},
-
 	-- lsp-config
 	"neovim/nvim-lspconfig",
 
