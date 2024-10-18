@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		-- see for example, :help vim.lsp.buf.hover()
 
 		-- Trigger code completion
-		bufmap('i', '<C-Space>', '<C-x><C-o>')
+		-- bufmap('i', '<C-Space>', '<C-x><C-o>')
 
 		-- Display documentation of the symbol under the cursor
 		bufmap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
