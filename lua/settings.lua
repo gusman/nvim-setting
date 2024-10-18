@@ -18,13 +18,12 @@ vim.o.sw = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = false
 	
--- Python specific editing
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = "*.py",
-	callback = function()
-	vim.bo.expandtab = true
-end
-})
+-- Set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+-- Below part is required for vim-tree
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 
 
