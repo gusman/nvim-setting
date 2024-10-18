@@ -7,7 +7,7 @@ lspconfig.gopls.setup({
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 	root_dir = util.root_pattern( "go.work", "go.mod", ".git" ),
-	single_file_support = false,
+	single_file_support = true,
 	settings = {
 		gopls = {
 			analyses = {
@@ -23,7 +23,7 @@ require'lspconfig'.pylsp.setup{
 	cmd = { "pylsp" },
 	filetypes = { "python" },
 	root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
-	single_file_support = false,
+	single_file_support = true,
 	settings = {
 		pylsp = {
 			plugins = {
