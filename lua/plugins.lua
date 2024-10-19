@@ -18,8 +18,6 @@ return {
 	"L3MON4D3/LuaSnip",
 	"saadparwaiz1/cmp_luasnip",
 
-
-
 	-- color scheme
 	{ "loctvl842/monokai-pro.nvim", lazy=false, },
 	"ellisonleao/gruvbox.nvim",
@@ -29,23 +27,27 @@ return {
 	-- commenter
 	"numToStr/Comment.nvim",
 
-	-- telesecope
+	-- telescope
 	{ 
 		'nvim-telescope/telescope.nvim', 
 		tag = '0.1.6',
-		requires = { { 'nvim-lua/plenary.nvim' } }
+		requires = { 
+			{ 'nvim-lua/plenary.nvim' },
+		}
 	},
+
+	-- telescope grep
+	{ "BurntSushi/ripgrep" },
+
+	-- telescope find files
+	{ "sharkdp/fd" },
+
 
 	-- telescope fzf
 	{ 
 		'nvim-telescope/telescope-fzf-native.nvim', 
 		build = 'make',
 	},
-
-	-- ripgrep
-	-- ripgrep requires ripgres application is installed in OS level
-	-- ripgrep is required by telescope for live-grep function
-	"BurntSushi/ripgrep",
 
 	-- treesitter
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
@@ -58,6 +60,17 @@ return {
 		'nvim-lualine/lualine.nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
+
+	-- markdown renderer
+	{
+		'MeanderingProgrammer/render-markdown.nvim',
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+		-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
+	}
 
 	-- Notification
 	-- lazy.nvim
