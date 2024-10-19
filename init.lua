@@ -12,8 +12,8 @@ require("code-comment")
 require("finder")
 require("git-status")
 require("status-line")
-require("lsp")
 require("completion")
+require("lsp")
 -- require("notification")
 
 -- Theme
