@@ -14,7 +14,7 @@ require("git-status")
 require("status-line")
 require("completion")
 require("lsp")
--- require("notification")
+require("notif")
 
 -- Theme
 require("theme")
