@@ -1,3 +1,13 @@
+function detect_fzf_build()
+	if vim.loop.os_uname().sysname == "Windows_NT" then
+		return 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' 
+	else
+		return 'make'
+	end
+end
+
+local fzf_build = detect_fzf_build()
+
 return {
 	-- file explorer
 	{
@@ -46,7 +56,8 @@ return {
 	-- telescope fzf
 	{ 
 		'nvim-telescope/telescope-fzf-native.nvim', 
-		build = 'make',
+		build = fzf_build,
+
 	},
 
 	-- treesitter

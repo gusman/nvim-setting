@@ -16,7 +16,8 @@
 * Install ripgrep using winget
 * Change `telescope-fzf-native` extension build using Cmake for Windows
 * Execute nvim and lazy in developer terminal and ensure all plugins are installed
-* Make libfzf.dll is copied/located at `$HOME\Local\nvim-data\lazy\telescope-fzf-native.nvim\build`
+* Make `libfzf.dll` is copied/located at `$HOME\Local\nvim-data\lazy\telescope-fzf-native.nvim\build`,
+    `libzf.dll` can be found at `$HOME\Local\nvim-data\lazy\telescope-fzf-native.nvim\build\release`
 
 ## LSP
 * python3-lsp for python
