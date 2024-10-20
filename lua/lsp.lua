@@ -1,3 +1,6 @@
+-- Completion capability
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- Requirements
 local lspconfig = require('lspconfig')
 local util = lspconfig.util
@@ -17,9 +20,10 @@ lspconfig.gopls.setup({
 			gofumpt = true,
 		},
 	},
+	capabilities = capabilities,
 })
 
-require'lspconfig'.pylsp.setup{
+require'lspconfig'.pylsp.setup({
 	cmd = { "pylsp" },
 	filetypes = { "python" },
 	root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
@@ -34,24 +38,7 @@ require'lspconfig'.pylsp.setup{
 				black = {enabled = true},
 			}
 		}
-	}
-}
-
-
--- require'lspconfig'.lua_ls.setup ({})
-
--- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
--- An example for configuring `clangd` LSP to use nvim-cmp as a completion engine
-require('lspconfig').pylsp.setup ({
+	},
 	capabilities = capabilities,
 })
 
-require('lspconfig').gopls.setup ({
-	capabilities = capabilities,
-})
-
--- require'lspconfig'.lua_ls.setup ({
--- 	capabilities = capabilities,
--- })
