@@ -15,6 +15,7 @@ require("status-line")
 require("completion")
 require("lsp")
 require("notif")
+require("symbol-outline")
 
 -- Theme
 require("theme")

@@ -63,6 +63,18 @@ return {
 	-- treesitter
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
+	-- symbol outline
+	{
+		'stevearc/aerial.nvim',
+		opts = {},
+
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons"
+		},
+	},
+
 	-- git
 	"lewis6991/gitsigns.nvim",
 
