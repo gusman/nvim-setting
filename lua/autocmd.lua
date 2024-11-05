@@ -2,8 +2,8 @@
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 	pattern = "*.py",
 	callback = function()
-	vim.bo.expandtab = true
-end
+		vim.bo.expandtab = true
+	end
 })
 
 -- Auto format buffer with LSP
@@ -17,8 +17,10 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 
 -- Autoimport for go
+vim.api.nvim_create_augroup('AutoImport', {})
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.go",
+	group = 'AutoImport',
 	callback = function()
 		local params = vim.lsp.util.make_range_params()
 		params.context = {only = {"source.organizeImports"}}

@@ -10,6 +10,8 @@ vim.keymap.set('n', '<leader>fo', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>ff', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fd', function() builtin.diagnostics({ bufnr = 0 }) end, {})
+vim.keymap.set('n', '<leader>fD', builtin.diagnostics, {})
 
 -- LSP mapping
 vim.api.nvim_create_autocmd('LspAttach', {
