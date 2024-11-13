@@ -36,6 +36,7 @@ require'lspconfig'.pylsp.setup({
 					maxLineLength = 88
 				},
 				black = { enabled = true },
+				isort = { enabled = true },
 			}
 		}
 	},
