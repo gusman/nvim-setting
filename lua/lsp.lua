@@ -23,7 +23,7 @@ lspconfig.gopls.setup({
 	capabilities = capabilities,
 })
 
-require'lspconfig'.pylsp.setup({
+lspconfig.pylsp.setup({
 	cmd = { "pylsp" },
 	filetypes = { "python" },
 	root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
