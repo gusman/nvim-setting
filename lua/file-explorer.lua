@@ -5,6 +5,7 @@ require("nvim-tree").setup({
 		indent_markers = {
 			enable = true,
 		},
+        
 
 		-- Enable below code block if does not want to use
 		-- we devicon
@@ -42,6 +43,9 @@ require("nvim-tree").setup({
 	actions = {
 		open_file = {
 			quit_on_open = true,
+            window_picker = {
+                enable = false,
+            },
 		},
 	},
 })
