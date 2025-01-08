@@ -35,14 +35,16 @@ lspconfig.pylsp.setup({
                     -- ignore = {'W391'},
                     maxLineLength = 88
                 },
-                autopep8 = { enabled = true },
+                autopep8 = { enabled = false},
                 isort = {
                     enabled = true,
+                    profile = "black",
+                    force_single_line = true,
                     multi_line_output = 3,
                     line_length = 88,
                 },
                 black = { enabled = true },
-                yapf = { enabled = true },
+                yapf = { enabled = false},
                 -- jedi = {
                 --     extra_paths = { 
                 --        "relative_extra_path_1", 
