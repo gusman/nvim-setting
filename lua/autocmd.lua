@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 -- Auto format buffer with LSP
 vim.api.nvim_create_augroup('AutoFormatting', {})
 vim.api.nvim_create_autocmd('BufWritePre', {
-	pattern = { '*.go' } ,
+	pattern = { '*.go', '*.py' } ,
 	group = 'AutoFormatting',
 	callback = function()
 		vim.lsp.buf.format({ async = true })

@@ -44,7 +44,11 @@ lspconfig.pylsp.setup({
                 black = { enabled = true },
                 yapf = { enabled = true },
                 -- jedi = {
-                --     extra_paths = { "src/lib/cg", "src/komodo", "src/clab_util" },
+                --     extra_paths = { 
+                --        "relative_extra_path_1", 
+                --        "relative_extra_path_2", 
+                --        "relative_extra_path_3" 
+                --     },
                 --     prioritize_extra_paths = true
                 -- }
             }
