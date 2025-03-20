@@ -39,8 +39,6 @@ lspconfig.pylsp.setup({
                 isort = {
                     enabled = true,
                     profile = "black",
-                    force_single_line = true,
-                    multi_line_output = 3,
                     line_length = 88,
                 },
                 black = { enabled = true },
