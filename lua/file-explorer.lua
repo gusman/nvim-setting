@@ -8,7 +8,7 @@ require("nvim-tree").setup({
         
 
 		-- Enable below code block if does not want to use
-		-- we devicon
+		-- web devicon
 
 		-- icons = {
 		-- 	web_devicons = {
@@ -42,7 +42,7 @@ require("nvim-tree").setup({
 	},
 	actions = {
 		open_file = {
-			-- quit_on_open = true,
+			quit_on_open = true,
             window_picker = {
                 enable = false,
             },
