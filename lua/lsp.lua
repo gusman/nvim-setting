@@ -1,15 +1,12 @@
 -- Completion capability
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- Requirements
-local lspconfig = require('lspconfig')
-local util = lspconfig.util
-
-lspconfig.gopls.setup({
+vim.lsp.enable("gopls")
+vim.lsp.config("gopls", {
 	-- Server-specific settings. See `:help lspconfig-setup`
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
-	root_dir = util.root_pattern( "go.work", "go.mod", ".git" ),
+	-- root_markers = { "go.work", "go.mod", ".git" },
 	single_file_support = true,
 	settings = {
 		gopls = {
@@ -23,10 +20,12 @@ lspconfig.gopls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.pylsp.setup({
+vim.lsp.enable("pylsp")
+vim.lsp.config("pylsp", {
     cmd = { "pylsp" },
     filetypes = { "python" },
-    root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
+    -- root_dir = util.root_pattern( ".git", "setup.cfg", "setup.py", "pyproject.toml" ),
+	-- root_markers = { ".git", "setup.cfg", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt"  },
     single_file_support = true,
     settings = {
         pylsp = {
